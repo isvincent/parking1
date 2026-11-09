@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "路邊停車｜駕駛圖解",
+  "short_name": "路邊停車",
+  "description": "含旁白、字幕與離線播放的路邊停車動態教學。",
+  "lang": "zh-Hant-TW",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f0e6",
+  "theme_color": "#183e40",
+  "categories": ["education"],
+  "icons": [
+    {"src":"./assets/icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./assets/icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"./assets/icons/maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}

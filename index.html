@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#183e40">
+  <meta name="description" content="路邊停車動態圖解：從選位觀察、倒入修正到停妥離位。含曉臻旁白、字幕與離線播放功能。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="路邊停車">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>路邊停車｜駕駛圖解</title>
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#player">跳至教學影片</a>
+  <header class="topbar">
+    <a class="brand" href="./index.html" aria-label="駕駛圖解首頁"><img src="./assets/icons/icon.svg" width="38" height="38" alt=""><span>駕駛圖解<small>DRIVING LAB</small></span></a>
+    <div class="top-actions"><span class="connection" id="connection">檢查連線中</span><button id="install" hidden>安裝到裝置</button></div>
+  </header>
+  <main>
+    <div class="intro"><p class="eyebrow">生活駕駛課 / 01</p><h1>把每一步，<br class="mobile-break">停得更安心。</h1><p>右側路邊停車，從觀察到離位。<br>跟著動態圖解，理解車尾進入與車頭外擺。</p></div>
+    <div class="lesson-layout">
+      <section class="player-section" aria-label="教學影片播放器">
+        <div class="video-frame"><video id="player" controls playsinline preload="metadata" poster="./media/poster.png" aria-label="路邊停車教學影片，4分18秒，含燒錄字幕"><source src="./media/parking.mp4" type="video/mp4"><track src="./media/parking.vtt" kind="captions" srclang="zh-TW" label="繁體中文（另有燒錄字幕）">您的瀏覽器無法播放影片，請使用下方下載連結。</video></div>
+        <p id="video-error" class="notice" role="alert" hidden></p>
+        <div class="player-meta"><span>4 分 18 秒 · 直式圖解</span><label>速度 <select id="speed" aria-label="播放速度"><option value="0.75">0.75 倍</option><option value="1" selected>正常</option><option value="1.25">1.25 倍</option><option value="1.5">1.5 倍</option></select></label></div>
+      </section>
+      <aside class="lesson-guide" aria-labelledby="guide-title">
+        <div class="guide-heading"><p class="eyebrow">慢・看・停・再調整</p><h2 id="guide-title">路邊停車</h2><p>選一個章節開始，或從頭完整看一遍。</p></div>
+        <nav id="chapters" class="chapters" aria-label="影片章節"></nav>
+        <noscript><p>開啟 JavaScript 可使用章節跳轉、逐字稿與離線儲存。影片仍可直接播放。</p></noscript>
+        <div class="offline-panel"><h3>帶著這堂課走</h3><p>先儲存影片，下次沒有網路也能播放。約需 18 MB 空間。</p><div class="button-row"><button class="primary" id="save-offline" disabled>準備離線功能中…</button><button id="remove-offline" hidden>移除離線影片</button></div><p id="offline-status" class="status" role="status" aria-live="polite">首次開啟需要網路。</p><button id="update" hidden>有新版本，更新頁面</button></div>
+        <details class="install-help"><summary>如何加入手機主畫面？</summary><p>支援安裝的瀏覽器會顯示「安裝到裝置」。iPhone／iPad 可在 Safari 分享選單選擇「加入主畫面」。安裝後仍須按「儲存離線影片」才有完整離線內容；實際選項依系統與瀏覽器而異。</p></details>
+      </aside>
+    </div>
+    <section class="transcript-section" aria-labelledby="transcript-title"><div class="section-heading"><div><p class="eyebrow">邊看邊複習</p><h2 id="transcript-title">完整教學文字</h2></div><a href="./media/parking.srt" download>下載字幕 SRT</a></div><details id="transcript-details"><summary>展開逐段解說 <span>點選時間可跳轉影片</span></summary><div id="transcript"></div></details><p id="data-error" class="notice" role="alert" hidden></p></section>
+    <section class="safety" aria-label="教學使用提醒"><h2>先熟悉自己的車，再上路。</h2><p>本片示範右側、平坦道路、自排小客車；圖形為動作示意，非等比例。實際轉向時機須依車型、側距及現場人車調整。請先在安全場地由合格教練指導練習。</p><a href="./media/parking.mp4" download="路邊停車.mp4">下載完整影片</a></section>
+  </main>
+  <footer><span>駕駛圖解 · 路邊停車教學</span><a href="./README.md">使用與部署說明</a></footer>
+</body>
+</html>
